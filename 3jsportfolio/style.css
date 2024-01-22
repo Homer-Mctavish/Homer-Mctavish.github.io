@@ -36,12 +36,18 @@ h1, h2, h3, blockquote {
   font-style: normal;
 }
 
-canvas {
+#bg {
   position: fixed;
   top: 0;
   left: 0;
 }
 
+#loading {
+  display: none;
+}
+
+#textual {
+background-color: aqua;}
 
 
   header {
@@ -74,7 +80,15 @@ canvas {
     display: inline;
     line-height: 1;
   }
-
+  #tes {
+    display: none;
+    z-index: 1;
+  } 
   .left {
     grid-column: 6 / 12;
+  }
+
+  #input-container div {
+    display: inline-block;
+    margin-right: 1rem;
   }
