@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Sam's Website</title>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sam's Website</title>
-    <script type="module" crossorigin src="index-XPXHVdt9.js"></script>
-    <link rel="stylesheet" crossorigin href="index-Fbap_BOV.css">
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.6.172/build/pdf.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+    <script type="module" crossorigin src="/assets/index--2UiIOOT.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-ObFLT9rD.css">
   </head>
   <body>
 
-    <canvas id="bg"></canvas>   
+    <canvas id="bg"></canvas>  
+
 
     <main>
 
@@ -18,7 +21,6 @@
         <h1>Sam Spearing</h1>
         <p>🚀 Welcome to my website!</p>
       </header>
-
 
       <blockquote>
         <p>I like making stuff and putting it on the internet</p>
@@ -40,21 +42,42 @@
 
       </section>
 
-      <section class="light">
+      <section class="right">
         <h2>👩🏽‍🚀 Projects</h2>
-
+        <div>
+          <h1>TesseRecognition</h1>
+          <p>
+            a
+            simple tool for converting PDF to text using Tesseract OCR. Files are converted
+            locally in the browser and are never uploaded to external servers.
+          </p>
+          <div id="input-container">
+            <p>Select the language and a file:</p>
+            <div>
+              <select name="languages" id="language-select"></select>
+            </div>
+            <div>
+              <label id="file-input-label" for="file-input">Select local pdf</label
+              ><br />
+              <input type="file" id="file-input" name="file-input" multiple />
+            </div>
+          </div>
+          <div id="textual"></div>
+          <div id="loading">Loading...</div>
+          <div id="error"></div>
+          <pre id="returno"></pre>
+          <canvas id="tes"></canvas>
+        </div>
         <p>
-          Google Sheets Automation and Microsoft SQL Server GCP API - Google Cloud Platform project for creating Pull
-          Schedules, itemized TRXIO Inventory Trackers, Bill of Materials, and interfacing with Microsoft SQL server.
+          <h1>Isocar</h1>
+          A top down speedrun of a racetrack made in Armory 3D game engine. Victory results from making a single complete circuit around the track, without deviating significantly.
+          <iframe frameborder="0" src="https://itch.io/embed/2514925" width="552" height="167"><a href="https://modeloperapeace.itch.io/isocar">Isocar</a></iframe>
+
         </p>
 
         <p>
           GPT-2 Based Conditional Text Generator - GPT-2 Long Short Term Memory Recurrent Neural Network for writing
           cover letters, SpaCy NLP for custom skill extraction and contextualization of cover letters.
-        </p>
-
-        <p>
-          Raster Image Pyramid and Mosaic Dataset CLI - Geographical data interpreter program for EDR.
         </p>
 
         <p>
@@ -119,7 +142,6 @@
       <blockquote>
         <p>Thanks for Reading!</p>
       </blockquote>
-
 
     </main>
     
