@@ -22,11 +22,33 @@ renderer.render(scene, camera);
 
 // Torus
 
-const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
-const torus = new THREE.Mesh(geometry, material);
+       // Geometry for the rings
+       const ringGeometry = new THREE.RingGeometry(10, 2, 64);
 
-scene.add(torus);
+       // Load texture for Saturn's rings
+       const textureLoader = new THREE.TextureLoader();
+       const ringTexture = textureLoader.load('saturn-ring-texture.jpg'); // Replace with an actual URL
+
+       // Material for the rings
+       const ringMaterial = new THREE.MeshBasicMaterial({
+           map: ringTexture,
+           side: THREE.DoubleSide,
+           transparent: true
+       });
+
+       // Create the mesh for the rings
+       const rings = new THREE.Mesh(ringGeometry, ringMaterial);
+       rings.rotation.x = Math.PI / 2;
+
+       // Add the rings to the scene
+       scene.add(rings);
+
+
+// const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
+// const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
+// const torus = new THREE.Mesh(geometry, material);
+
+// scene.add(torus);
 
 // Lights
 
@@ -117,9 +139,9 @@ moveCamera();
 function animate() {
   requestAnimationFrame(animate);
 
-  torus.rotation.x += 0.01;
-  torus.rotation.y += 0.005;
-  torus.rotation.z += 0.01;
+  rings.rotation.x += 0.01;
+  rings.rotation.y += 0.005;
+  rings.rotation.z += 0.01;
 
   moon.rotation.x += 0.005;
 

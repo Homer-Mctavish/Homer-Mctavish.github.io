@@ -6,6 +6,13 @@ canvas {
   left: 0;
 }
 
+.container {
+  display: flex;
+}
+.half {
+  flex: 1;
+  padding: 10px;
+}
 
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
@@ -14,6 +21,21 @@ canvas {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.emoji-bullets {
+  list-style-type: none; /* Remove default bullets */
+}
+
+.emoji-bullets li::before {
+  content: "😊"; /* Replace with your desired emoji */
+  margin-right: 8px; /* Add some space between the emoji and the text */
 }
 
 
@@ -30,7 +52,7 @@ main {
   grid-template-columns: repeat(12, 1fr);
 }
 
-h1, h2, h3, blockquote {
+h1, h2, h3, blockquote, a, li {
   font-family: elevon, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -52,7 +74,7 @@ canvas {
     margin-bottom: var(--spacing);
   }
 
-  section {
+  section,ul {
     grid-column: 2 / 8;
     padding: 1rem;
     background: var(--dark-bg);
@@ -77,4 +99,9 @@ canvas {
 
   .left {
     grid-column: 6 / 12;
+  }
+  .mid{
+    display: grid;
+    place-items: center; /* Center align both horizontally and vertically */
+    height: 100vh; /* Adjust height based on your content or use min-height */
   }

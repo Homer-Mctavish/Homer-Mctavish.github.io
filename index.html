@@ -20,13 +20,21 @@
       <header>
         <h1>Sam Spearing</h1>
         <p>🚀 Welcome to my website!</p>
+        <nav>
+          <ul class="emoji-bullets">
+            <li><a href="#section1">Introduction</a></li>
+            <li><a href="#section2">Projects</a></li>
+            <li><a href="#section3">Demonstrated Leadership</a></li>
+            <li><a href="#section4">Work History</a></li>
+            <!-- Add more sections as needed -->
+          </ul>
+        </nav>
       </header>
 
-      <blockquote>
-        <p>I like making stuff and putting it on the internet</p>
-      </blockquote>
 
-      <section>
+
+
+      <section id="section1">
         <h2>📜 Introduction</h2>
         <p>
           Hi there! My name is Sam, and I am a skilled software developer with a passion for machine learning and data visualization applications, as well as software quality assurance frameworks and tools like Kubernetes. In my professional career, I have worked on a variety of projects, from developing web applications to building custom machine learning models.
@@ -42,7 +50,7 @@
 
       </section>
 
-      <section class="right">
+      <section class="right" id="section2">
         <h2>👩🏽‍🚀 Projects</h2>
         <div>
           <h1>TesseRecognition</h1>
@@ -71,13 +79,23 @@
         <p>
           <h1>Isocar</h1>
           A top down speedrun of a racetrack made in Armory 3D game engine. Victory results from making a single complete circuit around the track, without deviating significantly.
-          <iframe frameborder="0" src="https://itch.io/embed/2514925" width="552" height="167"><a href="https://modeloperapeace.itch.io/isocar">Isocar</a></iframe>
+          <iframe src="https://armory3d.github.io/armory_examples_browser/templates/race_track/" title="Isocar"></iframe>
 
         </p>
 
         <p>
           GPT-2 Based Conditional Text Generator - GPT-2 Long Short Term Memory Recurrent Neural Network for writing
           cover letters, SpaCy NLP for custom skill extraction and contextualization of cover letters.
+
+            <div class="container">
+              <div class="half">              
+                <button id="sendButton">Read Skills</button>
+                <textarea id="outputTextArea" rows="5" cols="30">Skills appear here</textarea></div>
+              <div class="half">              
+                <textarea id="inputTextArea" rows="5" cols="30">Enter The job description here...</textarea>
+                <button id="generateCL">Generate Cover Letter</button></div>
+          </div>
+
         </p>
 
         <p>
@@ -94,45 +112,46 @@
           likelihood based on loan purpose, int.rate, natural log of income, FICO score, delinquencies and other factors.
         </p>
 
-        <h2>🏆 Demonstrated Leadership</h2>
-
-        <p>
-          Sikorsky STEM Challenge Leader, Sikorsky STEM Challenge
-          Club Treasurer, Science Fiction People Of Clark
-        </p>
-
-        <p>
-          Club Treasurer, Science Fiction People Of Clark
-        </p>
 
       </section>
+    <section class="mid" id="section3">
+    <h2>🏆 Demonstrated Leadership</h2>
 
+    <p>
+      Sikorsky STEM Challenge Leader, Sikorsky STEM Challenge
+      Club Treasurer, Science Fiction People Of Clark
+    </p>
+
+    <p>
+      Club Treasurer, Science Fiction People Of Clark
+    </p>
+    </section>
       <blockquote>
         <p>The best way out is always through <br>-Robert Frost</p>
       </blockquote>
 
-      <section class="left">
+      <section class="left" id="section4">
         <h2>🌮 Work History</h2>
 
         <h3>Callfinder Speech Analytics</h3>
         <p>
-          ○ Developed an automated testing framework native to Kubernetes cluster for automated
-          deployment of test in containerized environment.
-          ○ Communicated project tracking through daily stand-up meetings, sprint-retros, tickets associated to
-          a Jira Epic, and Confluence Documentation in compliance with the Agile Framework.
-          ○ Performed test case on software improvements and documented correct functionality on Jira.
+          ● Developed an automated testing framework native to Kubernetes cluster for automated
+          deployment of test in containerized environment.<br>
+          ● Communicated project tracking through daily stand-up meetings, sprint-retros, tickets associated to
+          a Jira Epic, and Confluence Documentation in compliance with the Agile Framework.<br>
+          ● Performed test case on software improvements and documented correct functionality on Jira.<br>
         </p>
         <h3>Realm Control</h3>
         <p>
-          Created productivity tools for automating spreadsheets using Google App Scripts.
+          ● Created productivity tools for automating spreadsheets using Google App Scripts.<br>
           ● Worked with IT staff to implement scripts to decrease logistic processing time by 600% by unifying new
-          inventory additions across warehouses for indexing during project specific Bill Of Material creation.
+          inventory additions across warehouses for indexing during project specific Bill Of Material creation.<br>
           ● Created Google Cloud Platform APIs to interface with BOM spreadsheets and external Microsoft SQL
-          Sever.
+          Sever.<br>
         </p>
         <h3>EDR</h3>
         <p>
-          ● Worked with IT staff to fully automate the deployment of Python API and CI/CD pipelines.
+          ● Worked with IT staff to fully automate the deployment of Python API and CI/CD pipelines.<br>
           ● Migrated existing elevation maps to a new environment, Saved $200k using project by ensuring
           compliance of 532 properties with CT Reg of State Agencies 22a-449(d)-1.
         </p>
