@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Sam's Website</title>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sam's Website</title>
     <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.6.172/build/pdf.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
-    <script type="module" crossorigin src="/assets/index--2UiIOOT.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-ObFLT9rD.css">
+    <script type="module" crossorigin src="/assets/index-CWIq-Ind.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D13tSLNk.css">
   </head>
   <body>
 
-    <canvas id="bg"></canvas>  
-
+    <canvas id="bg"></canvas>   
 
     <main>
 
       <header>
         <h1>Sam Spearing</h1>
         <p>🚀 Welcome to my website!</p>
+      </header>
+
+      <header>
         <nav>
           <ul class="emoji-bullets">
             <li><a href="#section1">Introduction</a></li>
@@ -31,8 +33,9 @@
         </nav>
       </header>
 
-
-
+      <blockquote>
+        <p>I like making stuff and putting it on the internet</p>
+      </blockquote>
 
       <section id="section1">
         <h2>📜 Introduction</h2>
@@ -50,9 +53,9 @@
 
       </section>
 
-      <section class="right" id="section2">
+      <section class="light" id="section2">
         <h2>👩🏽‍🚀 Projects</h2>
-        <div>
+        <div >
           <h1>TesseRecognition</h1>
           <p>
             a
@@ -78,58 +81,54 @@
         </div>
         <p>
           <h1>Isocar</h1>
-          A top down speedrun of a racetrack made in Armory 3D game engine. Victory results from making a single complete circuit around the track, without deviating significantly.
-          <iframe src="https://armory3d.github.io/armory_examples_browser/templates/race_track/" title="Isocar"></iframe>
+          A top down speedrun of a racetrack made in Armory 3D game engine. Victory results from making a single complete circuit around the track, without deviating significantly. Controls are W(left) A(forward) S(right) and D(back). Mobile gamers can mobilize to a REAL computer to play.
 
-        </p>
+        <!-- <div class="iframe-container">
+          <iframe id="myIframe" src="https://armory3d.github.io/armory_examples_browser/templates/race_track/"></iframe>
+        </div> -->
+        <object data="https://armory3d.github.io/armory_examples_browser/templates/race_track/" width="1500" height="770"></object>
 
         <p>
-          GPT-2 Based Conditional Text Generator - GPT-2 Long Short Term Memory Recurrent Neural Network for writing
-          cover letters, SpaCy NLP for custom skill extraction and contextualization of cover letters.
+          Google Sheets Automation and Microsoft SQL Server GCP API - Google Cloud Platform project for creating Pull
+          Schedules, itemized TRXIO Inventory Trackers, Bill of Materials, and interfacing with Microsoft SQL server.
+        </p>
 
-            <div class="container">
-              <div class="half">              
-                <button id="sendButton">Read Skills</button>
-                <textarea id="outputTextArea" rows="5" cols="30">Skills appear here</textarea></div>
-              <div class="half">              
-                <textarea id="inputTextArea" rows="5" cols="30">Enter The job description here...</textarea>
-                <button id="generateCL">Generate Cover Letter</button></div>
+
+        <h1>Resuyay</h1>
+        <p>
+A GPT-2 Based Long Short Term Memory (LSTM) Recurrent Neural Network (RNN) for writing cover letters, coupled with SpaCy Named Entity Recognition (NER) for custom skill extraction and contextualization of cover letters. First use the TesseRecognition service above to turn a resume into text, then press the "Read Skills" button to extract skills from that text. Skills will be displayed below this button. Edit to your liking, then when you are finished paste a copy of the job description you want into the box adjacent to it, which says "Enter the Job Description Here..." and press the "Generate Cover Letter" button to generate a cover letter tailored to these parameters.
+        </p>
+        <div class="container">
+          <div class="half left">
+            <textarea id="outputTextArea" rows="5" cols="30">Skills appear here</textarea>
+
+            <button id="sendButton">Read Skills</button>
           </div>
+          <div class="half right">
+            <textarea id="inputTextArea" rows="5" cols="30">Enter The job description here...</textarea>
 
-        </p>
-
-        <p>
-          A Deep Learning Neural Network for Identifying Counterfeit Bills – Sklearn Deep Neural Network on Bank
-        </p>
-        
-        <p>
-          Natural Language Interpretation Processor for Yelp Reviews – NLP model and sklearn pipeline that classifies Yelp
-          Reviews into 1 star or 5 star categories based off the text content in the reviews.
-        </p>
-
-        <p>
-          Random Forest Prediction Model for Debt Repayment – Random forest model for predicting loan repayment
-          likelihood based on loan purpose, int.rate, natural log of income, FICO score, delinquencies and other factors.
-        </p>
-
+            <button id="generateCL">Generate Cover Letter</button>
+          </div>
+      </div>
 
       </section>
-    <section class="mid" id="section3">
-    <h2>🏆 Demonstrated Leadership</h2>
 
-    <p>
-      Sikorsky STEM Challenge Leader, Sikorsky STEM Challenge
-      Club Treasurer, Science Fiction People Of Clark
-    </p>
 
-    <p>
-      Club Treasurer, Science Fiction People Of Clark
-    </p>
-    </section>
       <blockquote>
         <p>The best way out is always through <br>-Robert Frost</p>
       </blockquote>
-
+      <section class="mid" id="section3">
+        <h2>🏆 Demonstrated Leadership</h2>
+    
+        <p>
+          Sikorsky STEM Challenge Leader, Sikorsky STEM Challenge
+          Club Treasurer, Science Fiction People Of Clark
+        </p>
+    
+        <p>
+          Club Treasurer, Science Fiction People Of Clark
+        </p>
+        </section>
       <section class="left" id="section4">
         <h2>🌮 Work History</h2>
 
@@ -161,6 +160,7 @@
       <blockquote>
         <p>Thanks for Reading!</p>
       </blockquote>
+
 
     </main>
     
