@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Execution Time Measurement</title>
+    <style>
+        .bar-container {
+            width: 100%;
+            background-color: #f3f3f3;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .bar {
+            width: 0;
+            height: 30px;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="bar-container">
+        <div class="bar" id="loadingBar">0%</div>
+    </div>
+
+    <button id="startButton">Start Task</button>
+
+    <script>
+        function updateLoadingBar(progress) {
+            const bar = document.getElementById('loadingBar');
+            bar.style.width = progress + '%';
+            bar.innerHTML = Math.round(progress) + '%';
+        }
+
+        async function longRunningFunction() {
+            // Simulate a long-running task
+            return new Promise((resolve) => {
+                const largeArray = Array.from({ length: 100000 }, () => Math.floor(Math.random() * 100000));
+                largeArray.sort((a, b) => a - b); // O(n log n) complexity
+                resolve();
+            });
+        }
+
+        async function startTask() {
+            const start = performance.now();
+
+            // Update loading bar incrementally
+            let progress = 0;
+            const duration = 5000; // Simulate a 5-second task
+            const interval = 50; // Update every 50ms
+            const steps = duration / interval;
+            const stepProgress = 100 / steps;
+
+            const taskInterval = setInterval(() => {
+                if (progress >= 100) {
+                    clearInterval(taskInterval);
+                } else {
+                    progress += stepProgress;
+                    updateLoadingBar(progress);
+                }
+            }, interval);
+
+            // Call the long-running function and wait for it to complete
+            await longRunningFunction();
+
+            clearInterval(taskInterval);
+            updateLoadingBar(100); // Ensure it reaches 100% at the end
+
+            const end = performance.now();
+            const durationActual = end - start;
+            console.log(`Execution time: ${durationActual.toFixed(2)} milliseconds`);
+        }
+
+        document.getElementById('startButton').addEventListener('click', startTask);
+    </script>
+</body>
+</html>
